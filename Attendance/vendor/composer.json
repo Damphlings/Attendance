@@ -1,0 +1,13 @@
+{
+    "name": "attendance/committee-attendance-system",
+    "description": "A local committee attendance management system using PHP and SQLite.",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "endroid/qr-code": "^5.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

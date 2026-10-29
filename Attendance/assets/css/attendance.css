@@ -1,0 +1,213 @@
+.attendance-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.attendance-summary-card {
+    padding: 18px 20px;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.attendance-summary-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.attendance-summary-card strong {
+    display: block;
+    color: var(--primary);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.attendance-filter {
+    display: grid;
+    grid-template-columns: minmax(180px, 1.5fr) repeat(3, minmax(130px, 1fr)) auto;
+    align-items: end;
+    gap: 12px;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.attendance-filter .form-group {
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+.attendance-filter .form-control {
+    min-height: 41px;
+    font-size: 12px;
+}
+
+.attendance-table .time-cell {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.attendance-table .date-cell {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.attendance-member {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.attendance-member .member-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+}
+
+.attendance-member strong {
+    display: block;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.attendance-member span {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.attendance-session {
+    display: inline-block;
+    max-width: 220px;
+    overflow: hidden;
+    color: var(--text);
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.attendance-detail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.attendance-detail-item {
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.attendance-detail-item label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.attendance-detail-item p {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.attendance-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+}
+
+.attendance-actions .result-count {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.session-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.session-selector label {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.session-selector .form-control {
+    min-height: 44px;
+}
+
+.attendance-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border: 1px solid #D7E4FF;
+    border-radius: 9px;
+    background: #F1F6FF;
+    color: #234A87;
+    font-size: 12px;
+}
+
+.attendance-notice strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 1100px) {
+    .attendance-filter {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .attendance-filter .filter-actions {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .attendance-summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .attendance-summary-card {
+        padding: 16px;
+    }
+
+    .attendance-summary-card strong {
+        font-size: 22px;
+    }
+
+    .attendance-filter {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .attendance-filter .filter-actions {
+        grid-column: auto;
+    }
+
+    .attendance-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

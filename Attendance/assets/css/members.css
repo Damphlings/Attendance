@@ -1,0 +1,232 @@
+.members-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.members-toolbar-left,
+.members-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    position: relative;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 14px 10px 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background: #FFFFFF;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(27, 48, 110, 0.08);
+}
+
+.search-box .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    color: var(--text-muted);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.member-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.member-profile .member-avatar {
+    width: 42px;
+    height: 42px;
+}
+
+.member-profile-info {
+    min-width: 0;
+}
+
+.member-profile-info strong {
+    display: block;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.member-profile-info span {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.member-code {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-family: Consolas, monospace;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: var(--primary);
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.action-btn:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+}
+
+.action-btn.danger {
+    color: var(--danger);
+}
+
+.action-btn.danger:hover {
+    background: var(--danger-light);
+    border-color: var(--danger);
+}
+
+.member-form-card {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.member-form-section {
+    padding: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.member-form-section:last-child {
+    border-bottom: none;
+}
+
+.member-form-section h3 {
+    margin-bottom: 18px;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.member-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px 22px;
+    background: #FAFBFD;
+}
+
+.member-count {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.member-count strong {
+    color: var(--primary);
+}
+
+.member-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.member-detail-item {
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #FAFBFD;
+}
+
+.member-detail-item span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.member-detail-item strong {
+    display: block;
+    color: var(--primary);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.qr-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 190px;
+    padding: 20px;
+    border: 1px dashed var(--gray);
+    border-radius: 10px;
+    background: #FAFBFD;
+}
+
+.qr-preview img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .members-toolbar {
+        align-items: stretch;
+    }
+
+    .members-toolbar-left,
+    .members-toolbar-right {
+        width: 100%;
+    }
+
+    .search-box {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .member-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .member-form-section {
+        padding: 18px;
+    }
+
+    .member-form-actions {
+        padding: 18px;
+    }
+}
